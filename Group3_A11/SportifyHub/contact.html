@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Contact · Sportify Hub </title>
+  <link rel="stylesheet" href="./styles.css"/>
+  <link rel="stylesheet" href="/assets/css/contact.css"/>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    navLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  });
+</script>
+<body>
+  
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/logoo.png" alt="RU Logo">
+      <span>Sportify Hub</span>
+    </a>
+
+    <div class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="sports.html">Sports</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      
+      <!-- ✅ Signup button in header -->
+      <li><a href="signup.html" class="btn-signup">Signup</a></li>
+    </ul>
+  </div>
+</nav>
+    
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container contact-grid">
+
+      <!-- Contact Info -->
+      <div class="contact-info card card-body">
+        <h2 class="section-title">Get in Touch</h2>
+        <p>We’d love to hear from you! Reach out using the form or contact us directly.</p>
+        <ul class="info-list">
+          <li><i data-lucide="map-pin"></i>Baneshwor Nepal</li>
+          <li><i data-lucide="phone"></i>9841234636</li>
+          <li><i data-lucide="mail"></i> contact@sportifyhub.edu.np</li>
+        </ul>
+      </div>
+
+      <!-- Contact Form -->
+      <form class="form card card-body" data-form="contact">
+        <h3>Send us a Message</h3>
+        <label>Your Name</label>
+        <input class="input" name="name" placeholder="John Doe" required>
+
+        <label>Your Email</label>
+        <input class="input" type="email" name="email" placeholder="you@example.com" required>
+
+        <label>Interested In</label>
+        <select class="select" name="sport" required>
+          <option value="">Choose a sport</option>
+          <option>Football</option><option>Basketball</option>
+          <option>Swimming</option><option>Tennis</option>
+          <option>Soccer</option><option>Track</option>
+        </select>
+
+        <label>Phone (optional)</label>
+        <input class="input" name="phone" placeholder="+123 456 7890">
+
+        <label>Your Message</label>
+        <textarea class="textarea full" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+        <button class="btn submit full" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

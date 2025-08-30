@@ -1,0 +1,178 @@
+/* Hero */
+.swim-hero {
+  background: url('../assets/pool-bg.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+}
+
+.swim-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 50, 100, 0.5);
+}
+
+.swim-hero h1,
+.swim-hero p,
+.swim-hero .cta {
+  position: relative;
+  z-index: 1;
+}
+
+.swim-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.swim-hero p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 8px;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: #00bcd4;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #004d66;
+}
+
+.btn:hover { transform: scale(1.05); }
+
+/* Team Spotlight */
+.swim-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.swim-card {
+  background: #f9f9f9;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.swim-card:hover {
+  transform: translateY(-8px);
+}
+
+.swim-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.medals {
+  font-size: 1.2rem;
+  display: block;
+  margin-top: 8px;
+}
+
+/* Timeline */
+.swim-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.swim-timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: linear-gradient(180deg,#00e5ff,#0077b6);
+  top: 0; bottom: 0; left: 50%;
+  margin-left: -2px;
+  border-radius: 2px;
+}
+
+.swim-event {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.swim-event.left { left: 0; }
+.swim-event.right { left: 50%; }
+
+.swim-event .content {
+  background: #e0f7fa;
+  padding: 18px 22px;
+  border-radius: 14px;
+  position: relative;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.swim-event .content:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* Date badge */
+.swim-event .date {
+  background: #0077b6;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+/* Dot connector */
+.swim-event::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: #00bcd4;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+
+.swim-event.left::before { right: -8px; }
+.swim-event.right::before { left: -8px; }
+
+/* Ticket button */
+.ticket-btn {
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ticket-btn:hover {
+  background: #004d66;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .swim-timeline::after { left: 10px; }
+  .swim-event { width: 100%; padding-left: 40px; padding-right: 20px; }
+  .swim-event.right { left: 0; }
+  .swim-event::before { left: 0; }
+}

@@ -1,0 +1,116 @@
+/* =============================
+   Schedule Timeline Page
+============================= */
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: #1e293b;
+}
+
+/* Timeline Container */
+.timeline {
+  position: relative;
+  margin: 3rem auto;
+  padding: 2rem 0;
+  width: 90%;
+  max-width: 800px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: #e2e8f0;
+  border-radius: 4px;
+}
+
+/* Each Event */
+.event {
+  position: relative;
+  width: 50%;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.event:hover {
+  transform: translateY(-6px);
+}
+
+/* Alternate Left/Right Layout */
+.event.left { 
+  left: 0; 
+  transform: translateX(-8%); 
+}
+.event.right { 
+  left: 50%; 
+  transform: translateX(8%); 
+}
+
+/* Event Icon */
+.event .icon {
+  position: absolute;
+  top: 20px;
+  right: -40px;
+  background: #2563eb;
+  padding: 0.8rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+}
+.event.left .icon {
+  left: -40px;
+  right: auto;
+}
+
+/* Event Text */
+.event strong {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+.event div {
+  color: #334155;
+}
+
+.event small {
+  color: #64748b;
+  display: block;
+  margin-top: 0.3rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 8px;
+  }
+  .event {
+    width: 100%;
+    margin-left: 2rem;
+  }
+  .event.left,
+  .event.right {
+    left: 0;
+    transform: none;
+  }
+  .event .icon,
+  .event.left .icon {
+    left: -45px;
+    right: auto;
+  }
+}

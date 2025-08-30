@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Sportify Hub Swimming</title>
+  <link rel="stylesheet" href="../styles.css"/>
+  <link rel="stylesheet" href="/assets/css/swimming.css"/>
+</head>
+<script>
+  // Highlight current page link
+  const currentPage = window.location.pathname.split("/").pop();
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html">
+      <img src="/assets/logoo.png" alt="RU">
+      <span>Sportify Hub</span>
+    </a>
+    <div class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="football.html">Football</a></li>
+      <li><a href="basketball.html">Basketball</a></li>
+      <li><a href="swimming.html">Swimming</a></li>
+      <li><a href="tennis.html">Tennis</a></li>
+      <li><a href="esports.html">Esports</a></li>
+      <li><a href="chess.html">Chess</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <!-- Hero Section -->
+  <header class="swim-hero">
+    <h1>SHC Swimming</h1>
+    <p>"Glide. Sprint. Conquer the pool."</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="../tickets.html">Meet Tickets</a>
+      <a class="btn btn-secondary" href="../recruits.html">Join the Team</a>
+    </div>
+  </header>
+
+  <!-- Team Spotlight -->
+  <section class="section container">
+    <h2>🏊 Team Spotlight</h2>
+    <div class="swim-grid">
+
+      <div class="swim-card">
+        <img src="/assets/media/swimm.jpg" alt="Swimmer 1">
+        <h4>Ashley Rivera</h4>
+        <p>100m Butterfly</p>
+        <span class="medals">🥇🥈</span>
+      </div>
+
+      <div class="swim-card">
+        <img src="/assets/media/swimm.jpg" alt="Swimmer 2">
+        <h4>Marcus Lee</h4>
+        <p>200m Freestyle</p>
+        <span class="medals">🥇🥇🥉</span>
+      </div>
+
+      <div class="swim-card">
+        <img src="/assets/media/swimm.jpg" alt="Swimmer 3">
+        <h4>Sophia Chen</h4>
+        <p>50m Backstroke</p>
+        <span class="medals">🥈</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Upcoming Meets Timeline -->
+  <section class="section container">
+    <h2>Upcoming Meets</h2>
+    <div class="swim-timeline">
+
+      <div class="swim-event left">
+        <div class="content">
+          <span class="date">Oct 10</span>
+          <h4>SHC vs Lakeside</h4>
+          <p>🏊 Relay Challenge</p>
+          <button class="ticket-btn">Get Tickets</button>
+        </div>
+      </div>
+
+      <div class="swim-event right">
+        <div class="content">
+          <span class="date">Oct 24</span>
+          <h4>SHC VS River Sharks</h4>
+          <p>🌊 Away Invitational</p>
+          <button class="ticket-btn">Buy Ticket</button>
+        </div>
+      </div>
+
+      <div class="swim-event left">
+        <div class="content">
+          <span class="date">Nov 05</span>
+          <h4>SHC Championship Qualifier</h4>
+          <p>🏆 Home Meet</p>
+          <button class="ticket-btn">Get Tickets</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

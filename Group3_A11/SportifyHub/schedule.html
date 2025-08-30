@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Schedule · Sportify Hub Esports</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css"/>
+  <link rel="stylesheet" href="/assets/css/schedule.css"/>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    navLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  });
+</script>
+<body>
+  
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/logoo.png" alt="RU Logo">
+      <span>Sportify Hub</span>
+    </a>
+
+    <div class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="sports.html">Sports</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="signup.html" class="btn-signup">Signup</a></li>
+    </ul>
+  </div>
+</nav>
+    
+  <!-- Timeline Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Upcoming Matches</h2>
+
+      <div class="timeline">
+        <!-- eFootball -->
+        <div class="event left">
+          <div class="icon"><i data-lucide="gamepad-2"></i></div>
+          <strong>efb_krish vs Eking</strong>
+          <div>🎮 eFootball • 7:00 PM</div>
+          <small>22 SEP 2025</small>
+          <a class="btn btn-primary" href="./tickets.html">Watch Live</a>
+        </div>
+
+        <!-- PUBG -->
+        <div class="event right">
+          <div class="icon"><i data-lucide="crosshair"></i></div>
+          <strong>Battle Royale</strong>
+          <div>🔥 PUBG Squad Match • 8:00 PM</div>
+          <small>25 SEP 2025</small>
+          <a class="btn btn-primary" href="./tickets.html">Join Lobby</a>
+        </div>
+
+        <!-- Valorant -->
+        <div class="event left">
+          <div class="icon"><i data-lucide="target"></i></div>
+          <strong>Team Alpha vs Team Omega</strong>
+          <div>💥 Valorant • 9:00 PM</div>
+          <small>28 SEP 2025</small>
+          <a class="btn btn-primary" href="./tickets.html">Spectate</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

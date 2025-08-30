@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Basketball · Sportify Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css"/>
+  <link rel="stylesheet" href="/assets/css/basketball.css">
+  
+  <script>
+  // Highlight current page link
+  const currentPage = window.location.pathname.split("/").pop();
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+  <style>
+    /* 🎨 Basketball Theme */
+.basketball-hero {
+  background: url("../assets/basketballbg.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+    .basketball-hero h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #ff6a00;
+      margin-bottom: 10px;
+    }
+    .basketball-hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    .roster-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+.player-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;        /* prevent image from spilling */
+  max-width: 260px;        /* optional: keeps all cards uniform */
+  margin: auto;
+}
+
+.player-card img {
+  width: 100%;             /* always match container width */
+  height: 220px;           /* fixed image height */
+  object-fit: cover;       /* crop and keep aspect ratio */
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+    .player-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    
+    .stats-toggle {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .stats-box {
+      display: none;
+      background: #1a1a1a;
+      color: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      margin-top: 20px;
+      text-align: left;
+    }
+    .game-list .game {
+      display: flex;
+      justify-content: space-between;
+      background: #ff6a00;
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 10px;
+      margin: 10px 0;
+      font-weight: 600;
+
+      .timeline {
+  border-left: 4px solid #ff8c00;
+  margin: 20px 0;
+  padding-left: 20px;
+}
+.timeline-item {
+  margin-bottom: 20px;
+  position: relative;
+}
+.timeline-item::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: #ff8c00;
+  border-radius: 50%;
+  position: absolute;
+  left: -32px;
+  top: 5px;
+  box-shadow: 0 0 10px #ff8c00;
+}
+.date {
+  font-weight: 700;
+  color: #ff8c00;
+  display: block;
+}
+.match {
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.match:hover {
+  background: #ff8c00;
+  color: #fff;
+  transform: translateX(5px);
+  transition: 0.3s;
+}
+.tag {
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  margin-left: 8px;
+}
+.home {
+  background: green;
+  color: #fff;
+}
+.away {
+  background: red;
+  color: #fff;
+}
+
+    }
+  </style>
+</head>
+<body>
+  
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html">
+      <img src="/assets/logoo.png" alt="RU">
+      <span>Sportify Hub</span>
+    </a>
+    <div class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="football.html">Football</a></li>
+      <li><a href="basketball.html">Basketball</a></li>
+      <li><a href="swimming.html">Swimming</a></li>
+      <li><a href="tennis.html">Tennis</a></li>
+      <li><a href="esports.html">Esports</a></li>
+      <li><a href="chess.html">Chess</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <!-- Hero -->
+  <header class="basketball-hero">
+    <h1>Sportify Hub Club</h1>
+    <p>"Fast breaks. Fierce defense. Unstoppable teamwork."</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="../tickets.html">Get Tickets</a>
+      <a class="btn btn-secondary" href="../recruits.html">Join the Team</a>
+    </div>
+  </header>
+
+  <!-- Team Roster -->
+  <section class="section container">
+    <h2>Meet the Team</h2>
+    <div class="roster-grid">
+      <div class="player-card">
+        <img src="/assets/media/bplayer1.jpg" alt="Player 1">
+        <h4>Alex Carter</h4>
+        <p>Guard • Senior</p>
+      </div>
+      <div class="player-card">
+        <img src="/assets/media/bplayer2.jpg" alt="Player 2">
+        <h4>Marcus Hill</h4>
+        <p>Forward • Junior</p>
+      </div>
+      <div class="player-card">
+        <img src="/assets/media/bplayer3.jpg" alt="Player 3">
+        <h4>Jordan Smith</h4>
+        <p>Center • Sophomore</p>
+      </div>
+    </div>
+  </section>
+
+<section class="section container">
+  <h2>Team Stats</h2>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-inner">
+        <div class="stat-front">
+          <h3>85</h3>
+          <p>Points/Game</p>
+        </div>
+        <div class="stat-back">
+          <p>Season-high 110 points vs Eastside</p>
+        </div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-inner">
+        <div class="stat-front">
+          <h3>42</h3>
+          <p>Rebounds/Game</p>
+        </div>
+        <div class="stat-back">
+          <p>Top rebounder: Marcus Hill (12 avg)</p>
+        </div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-inner">
+        <div class="stat-front">
+          <h3>39%</h3>
+          <p>3-Point Accuracy</p>
+        </div>
+        <div class="stat-back">
+          <p>Best shooter: Alex Carter (45%)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Upcoming Games Timeline -->
+<section class="section container">
+  <h2>Upcoming Games</h2>
+  <div class="timeline">
+
+    <div class="timeline-item left">
+      <div class="content">
+        <span class="date">Nov 18</span>
+        <h4>SHC vs Central</h4>
+        <p>🏠 Home Game</p>
+        <button class="ticket-btn">Get Tickets</button>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="content">
+        <span class="date">Nov 25</span>
+        <h4>SHC VS Eastside</h4>
+        <p>🚌 Away Game</p>
+        <button class="ticket-btn">Buy Ticket</button>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="content">
+        <span class="date">Dec 05</span>
+        <h4>SHC vs Westside</h4>
+        <p>🏠 Home Game</p>
+        <button class="ticket-btn">Get Tickets</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+  <script>
+    // Toggle team stats
+    function toggleStats() {
+      const statsBox = document.getElementById("statsBox");
+      statsBox.style.display = statsBox.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Football · Sportify Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css"/>
+  <link rel="stylesheet" href="/assets/css/football.css">
+  
+  <script>
+    // Highlight current page link
+    const currentPage = window.location.pathname.split("/").pop();
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".nav-links a").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html">
+      <img src="/assets/logoo.png" alt="RU">
+      <span>Sportify Hub</span>
+    </a>
+    <div class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="football.html">Football</a></li>
+      <li><a href="basketball.html">Basketball</a></li>
+      <li><a href="swimming.html">Swimming</a></li>
+      <li><a href="tennis.html">Tennis</a></li>
+      <li><a href="esports.html">Esports</a></li>
+      <li><a href="chess.html">Chess</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <!-- Hero -->
+  <header class="football-hero">
+    <h1>Sportify Hub Football</h1>
+    <p>"Strength. Passion. Brotherhood under the lights."</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="../tickets.html">Get Tickets</a>
+      <a class="btn btn-secondary" href="../recruits.html">Join the Team</a>
+    </div>
+  </header>
+
+  <!-- Team Roster -->
+  <section class="section container">
+    <h2>Meet the Squad</h2>
+    <div class="roster-grid">
+      <div class="player-card">
+        <div class="player-front">
+          <img src="/assets/media/fplayer1.jpg" alt="Player 1">
+          <h4>Lionel Messi</h4>
+          <p>ST • goal poacher</p>
+        </div>
+        <div class="player-back">
+          <p>"Field general with goal scoring ability & lightning-fast decision-making."</p>
+        </div>
+      </div>
+      <div class="player-card">
+        <div class="player-front">
+          <img src="/assets/media/fplayer2.jpg" alt="Player 2">
+          <h4>Cristiano Ronaldo</h4>
+          <p>RW • Creative Playmaker</p>
+        </div>
+        <div class="player-back">
+          <p>"Creative playmaking, passing and a leader."</p>
+        </div>
+      </div>
+      <div class="player-card">
+        <div class="player-front">
+          <img src="/assets/media/fplayer3.jpg" alt="Player 3">
+          <h4>Hary Hazard</h4>
+          <p>Rb • Offensive Fullback</p>
+        </div>
+        <div class="player-back">
+          <p>"Explosive speed, can break through any defense."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Stats -->
+  <section class="section container">
+    <h2>Team Stats</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3 data-count="35">0</h3>
+        <p>Goals</p>
+      </div>
+      <div class="stat-card">
+        <h3 data-count="56">0</h3>
+        <p>League Points</p>
+      </div> 
+      <div class="stat-card">
+        <h3 data-count="23">0</h3>
+        <p>GD</p>
+      </div>
+    </div>
+  </section>
+
+<section class="section container">
+  <h2>Upcoming Games</h2>
+  <div class="vs-grid">
+    <div class="vs-card">
+      <div class="team">Forca FC</div>
+      <div class="vs">VS</div>
+      <div class="team">Lalitpur FC</div>
+      <span class="date">Oct 10 • Home</span>
+      <button class="ticket-btn">Get Tickets</button>
+    </div>
+    <div class="vs-card away">
+      <div class="team">Forca FC</div>
+      <div class="vs">VS</div>
+      <div class="team">Baneshowr FC</div>
+      <span class="date">Oct 17 • Away</span>
+      <button class="ticket-btn">Get Ticket</button>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  // Animate stats counting up
+  const counters = document.querySelectorAll("[data-count]");
+  const speed = 150;
+  counters.forEach(counter => {
+    const animate = () => {
+      const value = +counter.getAttribute("data-count");
+      const data = +counter.innerText;
+      const increment = value / speed;
+      if (data < value) {
+        counter.innerText = Math.ceil(data + increment);
+        setTimeout(animate, 20);
+      } else {
+        counter.innerText = value;
+      }
+    };
+    animate();
+  });
+</script>
+
+</body>
+</html>

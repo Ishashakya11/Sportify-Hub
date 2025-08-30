@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Gallery · Sportify Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css"/>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+    }
+    .gallery-title {
+      text-align: center;
+      padding: 2rem 1rem 0.5rem;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #1e293b;
+    }
+    .gallery-subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #475569;
+      margin-bottom: 3rem;
+    }
+    section.vertical-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .slide {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .slide img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+    .slide-content {
+      padding: 1.5rem;
+    }
+    .slide-content h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.5rem;
+      color: #1e293b;
+    }
+    .slide-content p {
+      font-size: 1rem;
+      color: #475569;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/logoo.png" alt="Sportify Hub" style="height:40px;">
+      <span>Sportify Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sports.html">Sports</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="signup.html" class="btn-signup">Signup</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Page Title -->
+<div class="gallery-title">Photo Gallery</div>
+<div class="gallery-subtitle">Explore the best moments from our sports events and highlights</div>
+
+<!-- Vertical Gallery -->
+<section class="vertical-gallery">
+  <!-- Slide 1 -->
+  <div class="slide">
+    <img src="/assets/img4.png" alt="Gallery 1">
+    <div class="slide-content">
+      <h3>Provincial Football Championship</h3>
+      <p>Our team dominated the field this season, showcasing teamwork, skill, and determination. Highlights include the thrilling last-minute goal and the MVP performance.</p>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide">
+    <img src="/assets/img2.png" alt="Gallery 2">
+    <div class="slide-content">
+      <h3>Intercollege Basketball</h3>
+      <p>Several university records were broken at the home basketball meet. Athletes displayed incredible speed and endurance across all field.</p>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="slide">
+    <img src="/assets/img1.png" alt="Gallery 3">
+    <div class="slide-content">
+      <h3>Basketball Finals Highlights</h3>
+      <p>Our basketball team made it to the finals, with intense matchups and outstanding performances. Fans cheered as the team played with heart and strategy.</p>
+    </div>
+  </div>
+
+  <!-- Slide 4 -->
+  <div class="slide">
+    <img src="/assets/img3.jpg" alt="Gallery 4">
+    <div class="slide-content">
+      <h3>Esports Tournament</h3>
+      <p>The university esports teams battled fiercely in the national tournament. From Valorant to Minecraft, students showcased skill, strategy, and teamwork.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Highlight current nav link
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll(".nav-links a");
+    navLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

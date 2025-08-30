@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Esports Hub · Sportify Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css"/>
+  <link rel="stylesheet" href="../assets/css/esports.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+  <script>
+
+    const currentPage = window.location.pathname.split("/").pop();
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".nav-links a").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html">
+      <img src="/assets/logoo.png" alt="RU">
+      <span>Sportify Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="football.html">Football</a></li>
+      <li><a href="basketball.html">Basketball</a></li>
+      <li><a href="tennis.html">Tennis</a></li>
+      <li><a href="esports.html" class="active">Esports</a></li>
+      <li><a href="chess.html">Chess</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="esports-hero">
+  <div class="overlay">
+    <h1>Sportify Hub Esports</h1>
+    <p>Track Matches • Join Teams • Climb the Leaderboard</p>
+    <div class="ticker">
+      <div class="ticker-track">
+        <span>Valorant Clash: Shadow vs Phoenix.exe -- PUBG Royale: Alpha vs Omega -- eFootball Cup: eKing vs efb_krish -- Minecraft Bedwars League continues…</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Game Selector -->
+<section class="section container">
+  <h2><i data-lucide="gamepad-2"></i> Explore Games</h2>
+  <div class="game-filter">
+    <button data-game="all" class="active">All</button>
+    <button data-game="valorant">Valorant</button>
+    <button data-game="pubg">PUBG</button>
+    <button data-game="efootball">eFootball</button>
+    <button data-game="minecraft">Minecraft</button>
+  </div>
+  <div class="games-grid">
+    <div class="game-card" data-game="valorant"><img src="/assets/media/VALORANT.jpg"><h3>Valorant</h3></div>
+    <div class="game-card" data-game="pubg"><img src="/assets/media/PUBG Icon.jpg"><h3>PUBG Mobile</h3></div>
+    <div class="game-card" data-game="efootball"><img src="/assets/media/ef.jpg"><h3>eFootball</h3></div>
+    <div class="game-card" data-game="minecraft"><img src="/assets/media/bedwars.jpg"><h3>Minecraft Bedwars</h3></div>
+  </div>
+</section>
+
+<!-- Leaderboard -->
+<section class="section container">
+  <h2><i data-lucide="trophy"></i> Weekly Leaderboard</h2>
+  <table class="leaderboard">
+    <thead>
+      <tr><th>Rank</th><th>Player</th><th>Game</th><th>Stats</th><th>Wins</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>ShadowHunter</td><td>Valorant</td><td>2.1 KDA</td><td>15</td></tr>
+      <tr><td>2</td><td>Sn1perX</td><td>PUBG</td><td>78 kills</td><td>12</td></tr>
+      <tr><td>3</td><td>PixelMage</td><td>Minecraft</td><td>145 pts</td><td>10</td></tr>
+      <tr><td>4</td><td>eKing</td><td>eFootball</td><td>32 goals</td><td>9</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Live Matches -->
+<section class="section container">
+  <h2><i data-lucide="tv"></i> Live & Upcoming Matches</h2>
+  <div class="matches-grid">
+    <div class="match-card live">
+      <div class="teams">
+        <img src="/assets/media/shadow.jpg"><span>Shadow</span>
+        <strong>vs</strong>
+        <img src="/assets/media/phoneix.webp"><span>Phoenix</span>
+      </div>
+      <div class="status">LIVE</div>
+      <div class="score">8 - 6</div>
+    </div>
+    <div class="match-card upcoming">
+      <div class="teams">
+        <img src="/assets/media/alpha.jpg"><span>Alpha</span>
+        <strong>vs</strong>
+        <img src="/assets/media/omega.jpg"><span>Omega</span>
+      </div>
+      <div class="status">Starts in:</div>
+      <div class="countdown" data-time="2025-08-27T18:00:00"></div>
+    </div>
+  </div>
+</section>
+
+<!-- News -->
+<section class="section container">
+  <h2><i data-lucide="newspaper"></i> Esports News</h2>
+  <div class="news-grid">
+    <article>
+      <h4>Valorant team secures big win</h4>
+      <p>Sportify Hub’s Valorant roster defeated top contenders in the Inter-University Cup.</p>
+    </article>
+    <article>
+      <h4>PUBG Squad heads to Nationals</h4>
+      <p>Our PUBG team qualified for the National Championships.</p>
+    </article>
+  </div>
+</section>
+
+<!-- Highlights -->
+<section class="section container">
+  <h2><i data-lucide="play-circle"></i> Highlights</h2>
+  <div class="highlights-grid" style="display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(300px,1fr));">
+    <iframe width="100%" height="200" src="https://www.youtube.com/embed/mfBoy9PyqR8" title="Highlight 1" allowfullscreen style="border-radius:10px;"></iframe>
+    <iframe width="100%" height="200" src="https://www.youtube.com/embed/noLL5xy0UnU" title="Highlight 2" allowfullscreen style="border-radius:10px;"></iframe>
+  </div>
+</section>
+
+
+<script src="../assets/js/esports.js"></script>
+<script>lucide.createIcons();</script>
+</body>
+</html>

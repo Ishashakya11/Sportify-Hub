@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Home · Sportify Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css"/>
+  <script src="script.js" defer></script>
+
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">
+      <img src="logoo.png" alt="logo">
+      <span>Sportify Hub</span>
+    </a>
+
+    <div class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="sports.html">Sports</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      
+      <!-- ✅ Signup button in header -->
+      <li><a href="signup.html" class="btn-signup">Signup</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <!-- ✅ Hero -->
+  <header class="hero">
+    <div class="content">
+      <h1>University Sports · Where Champions Are Made</h1>
+      <p>Strength. Spirit. Success.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="sports.html">Explore Sports</a>
+        <a class="btn btn-secondary">Watch Highlights</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="num" data-count="15">0</div><div>Sports Programs</div></div>
+        <div class="stat"><div class="num" data-count="500">0</div><div>Student Athletes</div></div>
+        <div class="stat"><div class="num" data-count="20">0</div><div>Championships</div></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ✅ Featured Sports -->
+  <section class="sports section">
+    <div class="container">
+      <h2 class="section-title">Featured Sports</h2>
+      <div class="grid">
+        <a href="sports.html" class="card">
+          <img src="assets/media/football.jpg" alt="Football" class="thumb">
+          <div class="card-body">
+            <span class="badge">Football</span>
+            <h3>Football Program</h3>
+            <p class="muted">Join our championship-winning football team</p>
+          </div>
+        </a>
+        <a href="sports.html" class="card">
+          <img src="assets/media/basketball.png" alt="Basketball" class="thumb">
+          <div class="card-body">
+            <span class="badge">Basketball</span>
+            <h3>Basketball Program</h3>
+            <p class="muted">Experience the thrill of the court</p>
+          </div>
+        </a>
+        <a href="sports.html" class="card">
+          <img src="assets/media/swmming.jpg" alt="Swimming" class="thumb">
+          <div class="card-body">
+            <span class="badge">Swimming</span>
+            <h3>Swimming Program</h3>
+            <p class="muted">Dive into excellence</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Upcoming Events -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Upcoming Events</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="assets/media/tennis.jpg" alt="Tennis" class="thumb">
+          <div class="card-body">
+            <span class="badge">July 15</span>
+            <h3>Grand Slam University Tennis Open</h3>
+            <p class="muted"><i class="fas fa-clock"></i> 2:00 PM - 6:00 PM · Central Tennis Court</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/media/badminton.jpg" alt="Badminton" class="thumb">
+          <div class="card-body">
+            <span class="badge">July 20</span>
+            <h3>Badminton Championship</h3>
+            <p class="muted"><i class="fas fa-clock"></i> 4:00 PM - 6:30 PM · Indoor Sports Arena</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/media/marathon.jpg" alt="Marathon" class="thumb">
+          <div class="card-body">
+            <span class="badge">July 25</span>
+            <h3>University Marathon Challenge</h3>
+            <p class="muted"><i class="fas fa-clock"></i> 7:00 AM - 12:00 PM · Sports Track</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="logoo.png" alt="Sportify Hub Logo" class="logo">
+        <h3>Sportify Hub</h3>
+        <p>Empowering students through sports and building champions for life.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="sports.html">Sports</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Sports</h4>
+        <ul>
+          <li><a href="sports.html">Football</a></li>
+          <li><a href="sports.html">Basketball</a></li>
+          <li><a href="sports.html">Swimming</a></li>
+          <li><a href="sports.html">Soccer</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact Info</h4>
+        <p>Sportify Hub Sports Complex<br>123 Campus Drive<br>Riverside City, RC 12345</p>
+        <p>Phone: (555) 123-4567<br>Email: athletics@ru.edu</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Sportify Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ✅ Modal -->
+  <div class="modal"><div class="modal-card"><div class="modal-body"></div></div></div>
+
+  <script>
+    function openVideo() {
+      const modal = document.querySelector('.modal');
+      const body = modal.querySelector('.modal-body');
+      body.innerHTML = `
+        <div class='center'>
+          <h2>🎥 Playing Highlights</h2>
+          <video src='videos/sports-bg.mp4' controls autoplay style='max-width:100%;border-radius:12px'></video>
+          <br>
+          <button class='btn submit' onclick='closeModal()'>Close</button>
+        </div>`;
+      modal.classList.add('active');
+    }
+
+    function closeModal() {
+      const modal = document.querySelector('.modal');
+      modal.classList.remove('active');
+      modal.querySelector('.modal-body').innerHTML = "";
+    }
+  </script>
+</body>
+</html>

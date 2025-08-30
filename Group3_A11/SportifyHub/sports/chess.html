@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Chess · Sportify Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css"/>
+  <link rel="stylesheet" href="/assets/css/chess.css">
+
+  <script>
+    // Highlight current page link
+    const currentPage = window.location.pathname.split("/").pop();
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".nav-links a").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html">
+      <img src="/assets/logoo.png" alt="RU">
+      <span>Sportify Hub</span>
+    </a>
+    <div class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="football.html">Football</a></li>
+      <li><a href="basketball.html">Basketball</a></li>
+      <li><a href="swimming.html">Swimming</a></li>
+      <li><a href="tennis.html">Tennis</a></li>
+      <li><a href="esports.html">Esports</a></li>
+      <li><a href="chess.html">Chess</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Coming Soon -->
+<header class="chess-hero">
+  <div class="overlay">
+    <h1>RU Chess</h1>
+    <p class="coming-soon">Coming Soon…</p>
+  </div>
+</header>
+
+</body>
+</html>
